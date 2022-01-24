@@ -1,0 +1,3 @@
+Comandos para iniciar el proyecto:
+
+npm install sequelize pg pg-hstore
