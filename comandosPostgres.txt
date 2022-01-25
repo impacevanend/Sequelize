@@ -1,0 +1,11 @@
+Comantos terminal
+
+ver una tabla en terminal postgres:
+
+\dt
+
+Consultar estructura de una tabla:
+
+\d "nombre de la tabla"
+
+DROP TABLE "User";

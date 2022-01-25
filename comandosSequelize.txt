@@ -1,0 +1,24 @@
+Comandos sequelize:
+
+
+Crear una base de datos
+
+npx sequelize db:create
+
+Crear un modelo (cración de tablas)
+
+npx sequelize model:generate --name User --attributes name:string,email:string,role:string
+
+Llamando archivo app.js desde node, para la creación de las tablas:
+node app.js
+
+alter: true:
+
+Realiza los cambios, creando una nueva tablas
+
+force: true:
+
+Realiza los cambios, creando una nueva tablas (hacer un DROP TABLE nombre de la tabla) 
+
+Instalación de express:
+
