@@ -10,7 +10,6 @@ const app = express();
 app.use(express.json());
 
 //Crear usuario en la base de datos
-
 app.post('/users', async(req, res)=>{
     const {name, email, role} = req.body;
 
@@ -23,6 +22,41 @@ app.post('/users', async(req, res)=>{
         console.log(error);
         return res.status(500).json(error);
     }
+});
+
+//Obtener todos los usuarios
+app.get('/users', async(req, res)=>{
+
+    try {
+
+        const users = await User.findAll();
+        return res.json(users);
+        
+    } catch (error) {
+        console.log(error);
+        return res.status(500).json({error: 'Somenthing went wrong'});
+    }
+
+});
+
+
+//Obtener sólo uno de los usuarios
+app.get('/users/:uuid', async(req, res)=>{
+
+    const uuid = req.params.uuid;
+
+    try {
+
+        const users = await User.findOne({
+            where: {uuid},
+        });
+        return res.json(users);
+        
+    } catch (error) {
+        console.log(error);
+        return res.status(500).json({error: 'Somenthing went wrong'});
+    }
+
 });
 
     app.listen({port: 5000}, async()=>{

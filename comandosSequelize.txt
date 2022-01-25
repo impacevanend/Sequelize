@@ -28,9 +28,20 @@ Cada vez que sincronizamos la base de datos la tabla se elimina
 
 Migraciones:
 npx sequelize db:migrate
+otro...
+informa la migración que se va a realizar
+npx sequelize db:migrate:status 
 
 borrar la base de datos:
 npx sequelize db:drop
+
+
+Llamar nodemon, para que se ejecute el servidor, durante cada cambio:
+npm install nodemon -g
+npx nodemon nombreDelArchivo.js
+
+Crar otra tabla:
+npx sequelize model:generate --name Post --attributes body:string
 
 
 
