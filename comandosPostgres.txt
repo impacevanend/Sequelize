@@ -9,3 +9,9 @@ Consultar estructura de una tabla:
 \d "nombre de la tabla"
 
 DROP TABLE "User";
+
+Verificar todos los registros de una tabla:
+SELECT * FROM users;
+
+Para borar la base de datos, conectarse a la base de datos postgres, predeterminada:
+\c postgres

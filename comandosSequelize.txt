@@ -22,3 +22,15 @@ Realiza los cambios, creando una nueva tablas (hacer un DROP TABLE nombre de la 
 
 Instalación de express:
 
+npm install express
+
+Cada vez que sincronizamos la base de datos la tabla se elimina
+
+Migraciones:
+npx sequelize db:migrate
+
+borrar la base de datos:
+npx sequelize db:drop
+
+
+
