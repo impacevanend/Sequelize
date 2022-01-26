@@ -15,3 +15,6 @@ SELECT * FROM users;
 
 Para borar la base de datos, conectarse a la base de datos postgres, predeterminada:
 \c postgres
+
+Describir tabla:
+\b posts

@@ -32,6 +32,8 @@ otro...
 informa la migración que se va a realizar
 npx sequelize db:migrate:status 
 
+npx sequelize db:migrate:undo -> revierte la ultima migración
+
 borrar la base de datos:
 npx sequelize db:drop
 
@@ -42,6 +44,15 @@ npx nodemon nombreDelArchivo.js
 
 Crar otra tabla:
 npx sequelize model:generate --name Post --attributes body:string
+
+
+Crear registros fictisios:
+
+npx sequelize seed:generate --name create-fake-users
+
+Creando registros de prueba en la base de datos
+npx sequelize db:seed:all
+
 
 
 
